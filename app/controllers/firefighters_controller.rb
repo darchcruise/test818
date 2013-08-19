@@ -3,6 +3,7 @@ class FirefightersController < ApplicationController
   # GET /firefighters.json
   def index
     @firefighters = Firefighter.all
+    expires_in 3.minutes, public: true
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class FirefightersController < ApplicationController
   # GET /firefighters/1.json
   def show
     @firefighter = Firefighter.find(params[:id])
+    expires_in 3.minutes, public: true
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class FirefightersController < ApplicationController
   # GET /firefighters/new.json
   def new
     @firefighter = Firefighter.new
+    expires_in 3.minutes, public: true
 
     respond_to do |format|
       format.html # new.html.erb
