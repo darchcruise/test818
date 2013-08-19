@@ -9,7 +9,7 @@ gem 'pg'
 
 gem 'newrelic_rpm'
 
-gem 'unicorn'
+gem 'puma'
 
 # Gems used only for assets and not required
 # in production environments by default.
